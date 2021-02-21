@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<launch>
+	<include file="$(find final_assignment)/launch/simulation_gmapping.launch"></include>
+	<include file="$(find final_assignment)/launch/move_base.launch"></include>
+
+    <arg name="def_x" default= "0"/>
+    <arg name="def_y" default= "0"/> 
+    <arg name="def_command" default= "0"/> 
+    <arg name="def_bug0" default="True" />
+    <param name="des_pos_x" value="$(arg def_x)" />
+    <param name="des_pos_y" value="$(arg def_y)" />
+    <param name="command" value="$(arg def_command)" />
+    <param name="bug0_reached" value="$(arg def_bug0)" />-->
+    
+    <node pkg="final_assignment" type="wall_follow_service_m.py" name="wall_follower" />
+    <node pkg="final_assignment" type="go_to_point_service_m.py" name="go_to_point" />
+    <node pkg="final_assignment" type="bug_m.py" name="bug" output="screen" />
+    <node pkg="final_assignment" type="userTarget_server.py" name="userTarget" output="screen"/>
+    <node pkg="final_assignment" type="randomTarget_server.py" name="randomTarget" />
+    <node pkg="final_assignment" type="userCommand_server.py" name="userCommand" output="screen"/>
+    <node pkg="final_assignment" type="controller.py" name="controller" output="screen"/>
+
+</launch>
+
