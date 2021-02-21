@@ -1,0 +1,72 @@
+\hypertarget{namespaceuser_command__server}{}\section{user\+Command\+\_\+server Namespace Reference}
+\label{namespaceuser_command__server}\index{user\+Command\+\_\+server@{user\+Command\+\_\+server}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceuser_command__server_af58afa8d0e79ec90aa8494db7e5de235}{user\+\_\+command} (request)
+\item 
+def \hyperlink{namespaceuser_command__server_ad36c1fe75d13f863cf878daf21d670de}{change\+\_\+command} ()
+\item 
+def \hyperlink{namespaceuser_command__server_a9c43146425e0634e73349dd86c2bb711}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespaceuser_command__server_a020cb62f8292048dd659ebb509d8ef3d}{active\+\_\+} = False
+\begin{DoxyCompactList}\small\item\em Global variables that checks if the service is active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{user\+Command\+\_\+server@{user\+Command\+\_\+server}!change\+\_\+command@{change\+\_\+command}}
+\index{change\+\_\+command@{change\+\_\+command}!user\+Command\+\_\+server@{user\+Command\+\_\+server}}
+\subsubsection[{\texorpdfstring{change\+\_\+command()}{change_command()}}]{\setlength{\rightskip}{0pt plus 5cm}def user\+Command\+\_\+server.\+change\+\_\+command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceuser_command__server_ad36c1fe75d13f863cf878daf21d670de}{}\label{namespaceuser_command__server_ad36c1fe75d13f863cf878daf21d670de}
+\begin{DoxyVerb}    Function used to get the command chosen by the user.
+    
+    First of all it disable this service in order to avoid that the
+    function is vainly repeated several times.
+    
+    It checks also if the command is already active, if it is true
+    the function doesn't set the command and ask again the command.
+    The chosen command is set on a parameter called "command".
+\end{DoxyVerb}
+ \index{user\+Command\+\_\+server@{user\+Command\+\_\+server}!main@{main}}
+\index{main@{main}!user\+Command\+\_\+server@{user\+Command\+\_\+server}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}def user\+Command\+\_\+server.\+main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceuser_command__server_a9c43146425e0634e73349dd86c2bb711}{}\label{namespaceuser_command__server_a9c43146425e0634e73349dd86c2bb711}
+\begin{DoxyVerb}    Main function that allows the user to type the next new target point.
+    Each time it checks if the service is active, if it is false check also
+    if the current command is two (user target) and change it in the command
+    four (stop the robot).
+    If the service is active it call the function change_command that allows
+    the user to choose a new command.
+\end{DoxyVerb}
+ \index{user\+Command\+\_\+server@{user\+Command\+\_\+server}!user\+\_\+command@{user\+\_\+command}}
+\index{user\+\_\+command@{user\+\_\+command}!user\+Command\+\_\+server@{user\+Command\+\_\+server}}
+\subsubsection[{\texorpdfstring{user\+\_\+command(request)}{user_command(request)}}]{\setlength{\rightskip}{0pt plus 5cm}def user\+Command\+\_\+server.\+user\+\_\+command (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceuser_command__server_af58afa8d0e79ec90aa8494db7e5de235}{}\label{namespaceuser_command__server_af58afa8d0e79ec90aa8494db7e5de235}
+\begin{DoxyVerb}    Function used to enable the service.
+    
+    Args:
+        request - it contains the value used to enable the service,
+                  it could be True or False.
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\index{user\+Command\+\_\+server@{user\+Command\+\_\+server}!active\+\_\+@{active\+\_\+}}
+\index{active\+\_\+@{active\+\_\+}!user\+Command\+\_\+server@{user\+Command\+\_\+server}}
+\subsubsection[{\texorpdfstring{active\+\_\+}{active_}}]{\setlength{\rightskip}{0pt plus 5cm}bool user\+Command\+\_\+server.\+active\+\_\+ = False}\hypertarget{namespaceuser_command__server_a020cb62f8292048dd659ebb509d8ef3d}{}\label{namespaceuser_command__server_a020cb62f8292048dd659ebb509d8ef3d}
+
+
+Global variables that checks if the service is active. 
+

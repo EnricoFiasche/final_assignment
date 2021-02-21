@@ -1,0 +1,111 @@
+\hypertarget{namespacecontroller}{}\section{controller Namespace Reference}
+\label{namespacecontroller}\index{controller@{controller}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacecontroller_a390107982046b42d626897f037ef4896}{set\+Goal} ()
+\item 
+def \hyperlink{namespacecontroller_a3ba3a77f1664636b10e961a018c7f66f}{stop\+Robot} ()
+\item 
+def \hyperlink{namespacecontroller_ab040192a9d158d9a008c04be63a2ef3e}{target\+Reached\+Callback} (result)
+\begin{DoxyCompactList}\small\item\em Callback function of subscriber to chek if a terget is reached. \end{DoxyCompactList}\item 
+def \hyperlink{namespacecontroller_aaff6338cd2edd1e5146feec03115941f}{control} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacecontroller_a240640e002c30765d0b09505fc64f5e7}{reached\+\_\+} = None
+\begin{DoxyCompactList}\small\item\em Global variable that check if a target is reached. \end{DoxyCompactList}\item 
+\hyperlink{namespacecontroller_a4937e30f10eec1bb2642391fd378d973}{pub\+\_\+goal\+\_\+} = None
+\begin{DoxyCompactList}\small\item\em Global Publisher to set a new goal. \end{DoxyCompactList}\item 
+\hyperlink{namespacecontroller_a4eff46b5a67216f8bf8eb3d09ca4aea1}{pub\+\_\+stop\+\_\+vel\+\_\+} = None
+\begin{DoxyCompactList}\small\item\em Global Publisher to stop the velocity of the robot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{controller@{controller}!control@{control}}
+\index{control@{control}!controller@{controller}}
+\subsubsection[{\texorpdfstring{control()}{control()}}]{\setlength{\rightskip}{0pt plus 5cm}def controller.\+control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecontroller_aaff6338cd2edd1e5146feec03115941f}{}\label{namespacecontroller_aaff6338cd2edd1e5146feec03115941f}
+\begin{DoxyVerb}    Main function that manages the behaviours of the robot.
+    In this function are set two publishers: pub_goal_ and
+    pub_stop_vel, the first one is used to set a new goal and the 
+    second one is used to stop the robot after reaching a target or
+    when it is following the wall.
+    Here are also set some Service as the userCommand, randomTarget,
+    userTarget, wall_follower and the bug0.
+    It is present also a Subscriber useful to understand the status
+    of the robot, in particular if a target is reached.
+\end{DoxyVerb}
+ \index{controller@{controller}!set\+Goal@{set\+Goal}}
+\index{set\+Goal@{set\+Goal}!controller@{controller}}
+\subsubsection[{\texorpdfstring{set\+Goal()}{setGoal()}}]{\setlength{\rightskip}{0pt plus 5cm}def controller.\+set\+Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecontroller_a390107982046b42d626897f037ef4896}{}\label{namespacecontroller_a390107982046b42d626897f037ef4896}
+\begin{DoxyVerb}    Function used to publish a new goal.
+    A variable "goal" is set with the new coordinates. The two
+    coordinates (x,y) are read in the two parameters "des_pos_x" and
+    "des_pos_y".
+    When the variable goal is correctly set, it'll be published
+    through the publisher pub_goal_.
+\end{DoxyVerb}
+ \index{controller@{controller}!stop\+Robot@{stop\+Robot}}
+\index{stop\+Robot@{stop\+Robot}!controller@{controller}}
+\subsubsection[{\texorpdfstring{stop\+Robot()}{stopRobot()}}]{\setlength{\rightskip}{0pt plus 5cm}def controller.\+stop\+Robot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecontroller_a3ba3a77f1664636b10e961a018c7f66f}{}\label{namespacecontroller_a3ba3a77f1664636b10e961a018c7f66f}
+\begin{DoxyVerb}    Function used to stop the velocity of the robot.
+    Using the topic '/cmd_vel' the linear and angular velocity is
+    published with value zero through the publisher pub_stop_vel_.
+\end{DoxyVerb}
+ \index{controller@{controller}!target\+Reached\+Callback@{target\+Reached\+Callback}}
+\index{target\+Reached\+Callback@{target\+Reached\+Callback}!controller@{controller}}
+\subsubsection[{\texorpdfstring{target\+Reached\+Callback(result)}{targetReachedCallback(result)}}]{\setlength{\rightskip}{0pt plus 5cm}def controller.\+target\+Reached\+Callback (
+\begin{DoxyParamCaption}
+\item[{}]{result}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecontroller_ab040192a9d158d9a008c04be63a2ef3e}{}\label{namespacecontroller_ab040192a9d158d9a008c04be63a2ef3e}
+
+
+Callback function of subscriber to chek if a terget is reached. 
+
+\begin{DoxyVerb}    Callback function used to notify the controller when a status of
+    the robot is changed.
+    The status checked is the one "SUCCEEDED", target reached.
+    It is useful to understand when a new command can be sent.
+    
+    Args:
+        result - it contains the status of the robot during move_base
+                 algorithm, described by the /move_base/result topic
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\index{controller@{controller}!pub\+\_\+goal\+\_\+@{pub\+\_\+goal\+\_\+}}
+\index{pub\+\_\+goal\+\_\+@{pub\+\_\+goal\+\_\+}!controller@{controller}}
+\subsubsection[{\texorpdfstring{pub\+\_\+goal\+\_\+}{pub_goal_}}]{\setlength{\rightskip}{0pt plus 5cm}controller.\+pub\+\_\+goal\+\_\+ = None}\hypertarget{namespacecontroller_a4937e30f10eec1bb2642391fd378d973}{}\label{namespacecontroller_a4937e30f10eec1bb2642391fd378d973}
+
+
+Global Publisher to set a new goal. 
+
+\index{controller@{controller}!pub\+\_\+stop\+\_\+vel\+\_\+@{pub\+\_\+stop\+\_\+vel\+\_\+}}
+\index{pub\+\_\+stop\+\_\+vel\+\_\+@{pub\+\_\+stop\+\_\+vel\+\_\+}!controller@{controller}}
+\subsubsection[{\texorpdfstring{pub\+\_\+stop\+\_\+vel\+\_\+}{pub_stop_vel_}}]{\setlength{\rightskip}{0pt plus 5cm}controller.\+pub\+\_\+stop\+\_\+vel\+\_\+ = None}\hypertarget{namespacecontroller_a4eff46b5a67216f8bf8eb3d09ca4aea1}{}\label{namespacecontroller_a4eff46b5a67216f8bf8eb3d09ca4aea1}
+
+
+Global Publisher to stop the velocity of the robot. 
+
+\index{controller@{controller}!reached\+\_\+@{reached\+\_\+}}
+\index{reached\+\_\+@{reached\+\_\+}!controller@{controller}}
+\subsubsection[{\texorpdfstring{reached\+\_\+}{reached_}}]{\setlength{\rightskip}{0pt plus 5cm}controller.\+reached\+\_\+ = None}\hypertarget{namespacecontroller_a240640e002c30765d0b09505fc64f5e7}{}\label{namespacecontroller_a240640e002c30765d0b09505fc64f5e7}
+
+
+Global variable that check if a target is reached. 
+

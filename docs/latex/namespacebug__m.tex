@@ -1,0 +1,256 @@
+\hypertarget{namespacebug__m}{}\section{bug\+\_\+m Namespace Reference}
+\label{namespacebug__m}\index{bug\+\_\+m@{bug\+\_\+m}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacebug__m_ab3e1fed8fba27ac54493712a95fdaafa}{bug0\+\_\+switch} (req)
+\item 
+def \hyperlink{namespacebug__m_a27cfd2a326148157d3e5e0affbe763f3}{clbk\+\_\+odom} (msg)
+\item 
+def \hyperlink{namespacebug__m_a6ab3d92b5b6ea12eaa52bf21cfa111f1}{clbk\+\_\+laser} (msg)
+\item 
+def \hyperlink{namespacebug__m_aca19305feae5c5489e7452e921fcbd9c}{change\+\_\+state} (state)
+\item 
+def \hyperlink{namespacebug__m_a6547c5ebcd1d3aa3e104a5b573e47862}{normalize\+\_\+angle} (angle)
+\item 
+def \hyperlink{namespacebug__m_a357589ad533151302b9fa9a893833382}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacebug__m_adc14150838edf40c8028207cd6bb2082}{pub} = None
+\begin{DoxyCompactList}\small\item\em Publisher for the velocity. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_abd32bbd25b55f71e56505e72ba56c2f6}{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+} = None
+\begin{DoxyCompactList}\small\item\em service go to point \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_af40e8063430e5b54ef2f3f8368338744}{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+} = None
+\begin{DoxyCompactList}\small\item\em service wall follower \end{DoxyCompactList}\item 
+int \hyperlink{namespacebug__m_a8b5b5c9259592b8efd526c5adb95d95b}{yaw\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em angle set to 0 \end{DoxyCompactList}\item 
+int \hyperlink{namespacebug__m_a23e5e76f14d9d0d139767cb229a53dda}{yaw\+\_\+error\+\_\+allowed\+\_\+} = 5
+\begin{DoxyCompactList}\small\item\em variable that contains the error allowed \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ab108d02234aa3ec58605b9f6980ec090}{position\+\_\+} = Point()
+\begin{DoxyCompactList}\small\item\em position of the robot \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_a8fb60e35f164091fe3355d3a0bce95af}{desired\+\_\+position\+\_\+} = Point()
+\begin{DoxyCompactList}\small\item\em desidered position \end{DoxyCompactList}\item 
+int \hyperlink{namespacebug__m_a1ab2c8fb582b2d935edf3a0193a45a15}{prev\+\_\+value\+\_\+x} = 0
+\begin{DoxyCompactList}\small\item\em previous value of the coordinate x \end{DoxyCompactList}\item 
+int \hyperlink{namespacebug__m_a4fc6d4a9e55a524cbc2a80a7f0d57553}{prev\+\_\+value\+\_\+y} = 0
+\begin{DoxyCompactList}\small\item\em previous value of the coordinate y \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_af10f89c7f929c9babce108f5d7382996}{x}
+\begin{DoxyCompactList}\small\item\em setting the coordinates of the desidered position \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ab8596d2ae799585b0d89152b55891aa8}{y}
+\begin{DoxyCompactList}\small\item\em setting the coordinates of the desidered position \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_afbb54887da57b97920c8d36c6daed1fc}{z}
+\begin{DoxyCompactList}\small\item\em setting the coordinates of the desidered position \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ac9d4d95c034fca5a2b5d08ea845bbfcb}{regions\+\_\+} = None
+\begin{DoxyCompactList}\small\item\em regions of the laser \end{DoxyCompactList}\item 
+list \hyperlink{namespacebug__m_ae70f71d3816862f72790fae7bfaa543b}{state\+\_\+desc\+\_\+} = \mbox{[}\textquotesingle{}Go to point\textquotesingle{}, \textquotesingle{}wall following\textquotesingle{}, \textquotesingle{}target reached\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em States of the algorithm. \end{DoxyCompactList}\item 
+int \hyperlink{namespacebug__m_a79dc362dff5bef439beacdd5c0c3b2f1}{state\+\_\+} = 2
+\begin{DoxyCompactList}\small\item\em default state, target reached \end{DoxyCompactList}\item 
+bool \hyperlink{namespacebug__m_aac2be257b1acdebfb27dab0e311550d4}{active\+\_\+} = False
+\begin{DoxyCompactList}\small\item\em Varible useful to understand if the algorithm is activated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{bug\+\_\+m@{bug\+\_\+m}!bug0\+\_\+switch@{bug0\+\_\+switch}}
+\index{bug0\+\_\+switch@{bug0\+\_\+switch}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{bug0\+\_\+switch(req)}{bug0_switch(req)}}]{\setlength{\rightskip}{0pt plus 5cm}def bug\+\_\+m.\+bug0\+\_\+switch (
+\begin{DoxyParamCaption}
+\item[{}]{req}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacebug__m_ab3e1fed8fba27ac54493712a95fdaafa}{}\label{namespacebug__m_ab3e1fed8fba27ac54493712a95fdaafa}
+\begin{DoxyVerb}    Function that enable and disable the gub0 algorithm
+    
+    Args:
+        req - Request data, which could be True or False
+\end{DoxyVerb}
+ \index{bug\+\_\+m@{bug\+\_\+m}!change\+\_\+state@{change\+\_\+state}}
+\index{change\+\_\+state@{change\+\_\+state}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{change\+\_\+state(state)}{change_state(state)}}]{\setlength{\rightskip}{0pt plus 5cm}def bug\+\_\+m.\+change\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacebug__m_aca19305feae5c5489e7452e921fcbd9c}{}\label{namespacebug__m_aca19305feae5c5489e7452e921fcbd9c}
+\begin{DoxyVerb}    Function that allow the bug0 algorithm to change the state.
+    
+    Args:
+        state - used to understand in which state is the robot.
+                The state are three:
+                    0 - Go to point
+                    1 - Wall follower
+                    2 - Target reached
+\end{DoxyVerb}
+ \index{bug\+\_\+m@{bug\+\_\+m}!clbk\+\_\+laser@{clbk\+\_\+laser}}
+\index{clbk\+\_\+laser@{clbk\+\_\+laser}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{clbk\+\_\+laser(msg)}{clbk_laser(msg)}}]{\setlength{\rightskip}{0pt plus 5cm}def bug\+\_\+m.\+clbk\+\_\+laser (
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacebug__m_a6ab3d92b5b6ea12eaa52bf21cfa111f1}{}\label{namespacebug__m_a6ab3d92b5b6ea12eaa52bf21cfa111f1}
+\begin{DoxyVerb}    CallBack function used to read the laser value that change
+    the value of each region.
+    
+    Args:
+        msg - message that contains the values read by the laser
+              described by the /scan topic.
+\end{DoxyVerb}
+ \index{bug\+\_\+m@{bug\+\_\+m}!clbk\+\_\+odom@{clbk\+\_\+odom}}
+\index{clbk\+\_\+odom@{clbk\+\_\+odom}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{clbk\+\_\+odom(msg)}{clbk_odom(msg)}}]{\setlength{\rightskip}{0pt plus 5cm}def bug\+\_\+m.\+clbk\+\_\+odom (
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacebug__m_a27cfd2a326148157d3e5e0affbe763f3}{}\label{namespacebug__m_a27cfd2a326148157d3e5e0affbe763f3}
+\begin{DoxyVerb}    CallBack function that reads the position of the robot using the
+    topic "/odom"
+    
+    Args:
+        msg - message that contains the position of the robot
+              described by the /odom topic
+\end{DoxyVerb}
+ \index{bug\+\_\+m@{bug\+\_\+m}!main@{main}}
+\index{main@{main}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}def bug\+\_\+m.\+main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacebug__m_a357589ad533151302b9fa9a893833382}{}\label{namespacebug__m_a357589ad533151302b9fa9a893833382}
+\begin{DoxyVerb}    Main function that controls the robot during the motion using bug0.
+    It controls the robot through three state
+    0 - go to point
+    1 - wall follower
+    2 - target reached
+    During the motion the program checks the distance from the actual
+    position and the target, if it is less than a given threshold, the
+    state of the robot is switched to target reached.
+    A timer is set when a new target is read in order to stop the robot
+    if it is not able to reach the goal.
+\end{DoxyVerb}
+ \index{bug\+\_\+m@{bug\+\_\+m}!normalize\+\_\+angle@{normalize\+\_\+angle}}
+\index{normalize\+\_\+angle@{normalize\+\_\+angle}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{normalize\+\_\+angle(angle)}{normalize_angle(angle)}}]{\setlength{\rightskip}{0pt plus 5cm}def bug\+\_\+m.\+normalize\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{}]{angle}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacebug__m_a6547c5ebcd1d3aa3e104a5b573e47862}{}\label{namespacebug__m_a6547c5ebcd1d3aa3e104a5b573e47862}
+\begin{DoxyVerb}    Function used to normalize the angle passed by parameter
+    
+    Arg:
+        angle - Angle that has to be normalized
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\index{bug\+\_\+m@{bug\+\_\+m}!active\+\_\+@{active\+\_\+}}
+\index{active\+\_\+@{active\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{active\+\_\+}{active_}}]{\setlength{\rightskip}{0pt plus 5cm}bool bug\+\_\+m.\+active\+\_\+ = False}\hypertarget{namespacebug__m_aac2be257b1acdebfb27dab0e311550d4}{}\label{namespacebug__m_aac2be257b1acdebfb27dab0e311550d4}
+
+
+Varible useful to understand if the algorithm is activated. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!desired\+\_\+position\+\_\+@{desired\+\_\+position\+\_\+}}
+\index{desired\+\_\+position\+\_\+@{desired\+\_\+position\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{desired\+\_\+position\+\_\+}{desired_position_}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+desired\+\_\+position\+\_\+ = Point()}\hypertarget{namespacebug__m_a8fb60e35f164091fe3355d3a0bce95af}{}\label{namespacebug__m_a8fb60e35f164091fe3355d3a0bce95af}
+
+
+desidered position 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!position\+\_\+@{position\+\_\+}}
+\index{position\+\_\+@{position\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{position\+\_\+}{position_}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+position\+\_\+ = Point()}\hypertarget{namespacebug__m_ab108d02234aa3ec58605b9f6980ec090}{}\label{namespacebug__m_ab108d02234aa3ec58605b9f6980ec090}
+
+
+position of the robot 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!prev\+\_\+value\+\_\+x@{prev\+\_\+value\+\_\+x}}
+\index{prev\+\_\+value\+\_\+x@{prev\+\_\+value\+\_\+x}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{prev\+\_\+value\+\_\+x}{prev_value_x}}]{\setlength{\rightskip}{0pt plus 5cm}int bug\+\_\+m.\+prev\+\_\+value\+\_\+x = 0}\hypertarget{namespacebug__m_a1ab2c8fb582b2d935edf3a0193a45a15}{}\label{namespacebug__m_a1ab2c8fb582b2d935edf3a0193a45a15}
+
+
+previous value of the coordinate x 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!prev\+\_\+value\+\_\+y@{prev\+\_\+value\+\_\+y}}
+\index{prev\+\_\+value\+\_\+y@{prev\+\_\+value\+\_\+y}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{prev\+\_\+value\+\_\+y}{prev_value_y}}]{\setlength{\rightskip}{0pt plus 5cm}int bug\+\_\+m.\+prev\+\_\+value\+\_\+y = 0}\hypertarget{namespacebug__m_a4fc6d4a9e55a524cbc2a80a7f0d57553}{}\label{namespacebug__m_a4fc6d4a9e55a524cbc2a80a7f0d57553}
+
+
+previous value of the coordinate y 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!pub@{pub}}
+\index{pub@{pub}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{pub}{pub}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+pub = None}\hypertarget{namespacebug__m_adc14150838edf40c8028207cd6bb2082}{}\label{namespacebug__m_adc14150838edf40c8028207cd6bb2082}
+
+
+Publisher for the velocity. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!regions\+\_\+@{regions\+\_\+}}
+\index{regions\+\_\+@{regions\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{regions\+\_\+}{regions_}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+regions\+\_\+ = None}\hypertarget{namespacebug__m_ac9d4d95c034fca5a2b5d08ea845bbfcb}{}\label{namespacebug__m_ac9d4d95c034fca5a2b5d08ea845bbfcb}
+
+
+regions of the laser 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+@{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+}}
+\index{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+@{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+}{srv_client_go_to_point_}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+ = None}\hypertarget{namespacebug__m_abd32bbd25b55f71e56505e72ba56c2f6}{}\label{namespacebug__m_abd32bbd25b55f71e56505e72ba56c2f6}
+
+
+service go to point 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+@{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+}}
+\index{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+@{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+}{srv_client_wall_follower_}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+ = None}\hypertarget{namespacebug__m_af40e8063430e5b54ef2f3f8368338744}{}\label{namespacebug__m_af40e8063430e5b54ef2f3f8368338744}
+
+
+service wall follower 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!state\+\_\+@{state\+\_\+}}
+\index{state\+\_\+@{state\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{state\+\_\+}{state_}}]{\setlength{\rightskip}{0pt plus 5cm}int bug\+\_\+m.\+state\+\_\+ = 2}\hypertarget{namespacebug__m_a79dc362dff5bef439beacdd5c0c3b2f1}{}\label{namespacebug__m_a79dc362dff5bef439beacdd5c0c3b2f1}
+
+
+default state, target reached 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!state\+\_\+desc\+\_\+@{state\+\_\+desc\+\_\+}}
+\index{state\+\_\+desc\+\_\+@{state\+\_\+desc\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{state\+\_\+desc\+\_\+}{state_desc_}}]{\setlength{\rightskip}{0pt plus 5cm}list bug\+\_\+m.\+state\+\_\+desc\+\_\+ = \mbox{[}\textquotesingle{}Go to point\textquotesingle{}, \textquotesingle{}wall following\textquotesingle{}, \textquotesingle{}target reached\textquotesingle{}\mbox{]}}\hypertarget{namespacebug__m_ae70f71d3816862f72790fae7bfaa543b}{}\label{namespacebug__m_ae70f71d3816862f72790fae7bfaa543b}
+
+
+States of the algorithm. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!x@{x}}
+\index{x@{x}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{x}{x}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+x}\hypertarget{namespacebug__m_af10f89c7f929c9babce108f5d7382996}{}\label{namespacebug__m_af10f89c7f929c9babce108f5d7382996}
+
+
+setting the coordinates of the desidered position 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!y@{y}}
+\index{y@{y}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{y}{y}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+y}\hypertarget{namespacebug__m_ab8596d2ae799585b0d89152b55891aa8}{}\label{namespacebug__m_ab8596d2ae799585b0d89152b55891aa8}
+
+
+setting the coordinates of the desidered position 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!yaw\+\_\+@{yaw\+\_\+}}
+\index{yaw\+\_\+@{yaw\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{yaw\+\_\+}{yaw_}}]{\setlength{\rightskip}{0pt plus 5cm}int bug\+\_\+m.\+yaw\+\_\+ = 0}\hypertarget{namespacebug__m_a8b5b5c9259592b8efd526c5adb95d95b}{}\label{namespacebug__m_a8b5b5c9259592b8efd526c5adb95d95b}
+
+
+angle set to 0 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!yaw\+\_\+error\+\_\+allowed\+\_\+@{yaw\+\_\+error\+\_\+allowed\+\_\+}}
+\index{yaw\+\_\+error\+\_\+allowed\+\_\+@{yaw\+\_\+error\+\_\+allowed\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{yaw\+\_\+error\+\_\+allowed\+\_\+}{yaw_error_allowed_}}]{\setlength{\rightskip}{0pt plus 5cm}int bug\+\_\+m.\+yaw\+\_\+error\+\_\+allowed\+\_\+ = 5}\hypertarget{namespacebug__m_a23e5e76f14d9d0d139767cb229a53dda}{}\label{namespacebug__m_a23e5e76f14d9d0d139767cb229a53dda}
+
+
+variable that contains the error allowed 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!z@{z}}
+\index{z@{z}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{z}{z}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+z}\hypertarget{namespacebug__m_afbb54887da57b97920c8d36c6daed1fc}{}\label{namespacebug__m_afbb54887da57b97920c8d36c6daed1fc}
+
+
+setting the coordinates of the desidered position 
+
